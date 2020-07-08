@@ -58,6 +58,12 @@ code --install-extension Shan.code-settings-sync
 echo 'installing spotify' 
 snap install spotify
 
+echo'installing Anaconda'
+cd /tmp
+sudo curl -O https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+bash Anaconda3-2020.02-Linux-x86_64.sh
+source ~/.bashrc
+
 echo 'installing chrome' 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
