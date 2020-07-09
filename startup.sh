@@ -61,22 +61,22 @@ code --install-extension Shan.code-settings-sync
 echo 'installing spotify' 
 snap install spotify
 
-echo'installing Python3/pip'
+echo 'installing Python3/pip'
 sudo apt-get install python3
 sudo apt-get install python3-pip
 
-echo'installing JupyterNotebook'
+echo 'installing JupyterNotebook'
 sudo -H pip install jupyter
 
-echo'installing Atom'
+echo 'installing Atom'
 sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
 sudo apt-get install atom
 
-echo'installing Discord'
+echo 'installing Discord'
 sudo snap install discord
 
-echo'installing Firefox'
+echo 'installing Firefox'
 sudo add-apt-repository ppa:mozillateam/firefox-stable
 sudo apt-get update
 sudo apt-get install firefox
