@@ -21,7 +21,12 @@ sh startup.sh
 * [Vim](https://www.vim.org/) - Text editor
 * [Oh-My-Zsh](https://ohmyz.sh/) - Framework for managing your ZSH configuration
 * [Xclip](https://opensource.com/article/19/7/xclip) - Command line interface to the X11 clipboard
-* [VsCode](https://code.visualstudio.com/) - Source-code editor made by Microsoft
+* [Python](https://www.python.org/) - Programming language
+* [Jupyter Notebook](https://jupyter.org/) - Notebooks
+* [Atom](https://atom.io/) - Text editor 
+* [Mozilla Firefox](https://www.mozilla.org/pt-BR/) - Browser
+* [Google Chrome](https://www.google.com/intl/pt-BR/chrome/) - Browser
+* [Discord](https://discord.com/new) - Group messaging services
 * [Spotify](https://www.spotify.com/) - Music streaming and media services provider
 * [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - It suggests commands as you type based on history and completions
 * [Franz](https://meetfranz.com/) - Group messaging services into one application
