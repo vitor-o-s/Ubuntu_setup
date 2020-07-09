@@ -2,6 +2,9 @@ echo "Welcome! Let's start setting up your system. It could take more than 10 mi
 
 sudo apt-get update
 
+echo 'installing snap'
+sudo apt install snapd
+
 echo 'installing curl' 
 sudo apt install curl -y
 
@@ -58,11 +61,25 @@ code --install-extension Shan.code-settings-sync
 echo 'installing spotify' 
 snap install spotify
 
-echo'installing Anaconda'
-cd /tmp
-sudo curl -O https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
-bash Anaconda3-2020.02-Linux-x86_64.sh
-source ~/.bashrc
+echo'installing Python3/pip'
+sudo apt-get install python3
+sudo apt-get install python3-pip
+
+echo'installing JupyterNotebook'
+sudo -H pip install jupyter
+
+echo'installing Atom'
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+
+echo'installing Discord'
+sudo snap install discord
+
+echo'installing Firefox'
+sudo add-apt-repository ppa:mozillateam/firefox-stable
+sudo apt-get update
+sudo apt-get install firefox
 
 echo 'installing chrome' 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
