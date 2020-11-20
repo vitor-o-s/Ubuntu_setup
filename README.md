@@ -23,13 +23,13 @@ sh startup.sh
 * [Xclip](https://opensource.com/article/19/7/xclip) - Command line interface to the X11 clipboard
 * [Jupyter Notebook](https://jupyter.org/) - Notebooks
 * [Atom](https://atom.io/) - Text editor
-* [VSCode](https://code.visualstudio.com/)
-* [PyCharm](https://www.jetbrains.com/pt-br/pycharm/)
+* [VSCode](https://code.visualstudio.com/) - Text editor
+* [PyCharm](https://www.jetbrains.com/pt-br/pycharm/) - Text editor
 * [Mozilla Firefox](https://www.mozilla.org/pt-BR/) - Browser
 * [Google Chrome](https://www.google.com/intl/pt-BR/chrome/) - Browser
 * [Discord](https://discord.com/new) - Group messaging services
 * [Spotify](https://www.spotify.com/) - Music streaming and media services provider
-* [Pip](https://pypi.org/project/pip/)
+* [Pip](https://pypi.org/project/pip/) - Package installer for Python
 * [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - It suggests commands as you type based on history and completions
 * [Franz](https://meetfranz.com/) - Group messaging services into one application
 * [Terminator](https://terminator-gtk3.readthedocs.io/en/latest/) - Terminal emulator like xterm, gnome-terminal, konsole, etc
