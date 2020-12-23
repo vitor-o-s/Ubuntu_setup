@@ -85,6 +85,9 @@ sudo snap install pycharm-community --classic
 echo 'installing Discord'
 sudo snap install discord
 
+echo 'installing Slack'
+sudo snap install slack -- classic
+
 echo 'installing chrome' 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
