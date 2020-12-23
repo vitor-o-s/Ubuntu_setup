@@ -85,11 +85,6 @@ sudo snap install pycharm-community --classic
 echo 'installing Discord'
 sudo snap install discord
 
-echo 'installing Firefox'
-sudo add-apt-repository ppa:mozillateam/firefox-stable
-sudo apt-get update
-sudo apt-get install firefox
-
 echo 'installing chrome' 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
@@ -107,11 +102,6 @@ sudo apt-get install -y -f
 echo 'installing terminator'
 sudo apt-get update
 sudo apt-get install terminator -y
-
-echo 'installing transmission'
-sudo add-apt-repository ppa:transmissionbt/ppa
-sudo apt-get update
-sudo apt-get install transmission transmission-qt -y
 
 clear 
 
