@@ -68,16 +68,10 @@ echo 'installing JupyterNotebook'
 sudo -H pip install jupyter
 
 echo 'installing Atom'
-sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-get update
-sudo apt-get install atom
+sudo snap install atom --classic
 
 echo 'Installing VSCode'
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get install apt-transport-https -y
-sudo apt-get update && sudo apt-get install code -y
+sudo snap install --classic code
 
 echo 'Installing PyCharm'
 sudo snap install pycharm-community --classic
@@ -106,6 +100,10 @@ echo 'installing terminator'
 sudo apt-get update
 sudo apt-get install terminator -y
 
+echo 'installing GNOME-Tweaks'
+sudo add-apt-repository universe
+sudo apt install gnome-tweak-tool
+
 clear 
 
-echo 'All setup, enjoy!
+echo 'All setup, enjoy!'
