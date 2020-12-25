@@ -30,8 +30,6 @@ sh startup.sh
 * [Spotify](https://www.spotify.com/) - Music streaming and media services provider
 * [Pip](https://pypi.org/project/pip/) - Package installer for Python
 * [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - It suggests commands as you type based on history and completions
-* [Franz](https://meetfranz.com/) - Group messaging services into one application
-* [Terminator](https://terminator-gtk3.readthedocs.io/en/latest/) - Terminal emulator like xterm, gnome-terminal, konsole, etc
 
 ## Authors
 
