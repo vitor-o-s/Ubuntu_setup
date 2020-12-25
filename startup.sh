@@ -91,15 +91,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 source ~/.zshrc
 
-echo 'installing franz' 
-wget https://github.com/meetfranz/franz/releases/download/v5.1.0/franz_5.1.0_amd64.deb -O franz.deb
-sudo dpkg -i franz.debchristian-kohler.path-intellisense
-sudo apt-get install -y -f 
-
-echo 'installing terminator'
-sudo apt-get update
-sudo apt-get install terminator -y
-
 echo 'installing GNOME-Tweaks'
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool
