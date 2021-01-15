@@ -61,6 +61,13 @@ code --install-extension Shan.code-settings-sync
 echo 'installing spotify' 
 snap install spotify
 
+echo 'installing Python3'
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.8
+
 echo 'installing pip3'
 sudo apt-get install python3-pip
 
@@ -94,6 +101,20 @@ source ~/.zshrc
 echo 'installing GNOME-Tweaks'
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool
+
+echo 'remove modmmanager for post-install QGroundControl'
+sudo usermod -a -G dialout $USER
+sudo apt-get remove modemmanager -y
+sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+
+echo 'installing ROS Noetic'
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+sudo apt update
+sudo apt install ros-noetic-desktop-full
+source /opt/ros/noetic/setup.bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 
 clear 
 
