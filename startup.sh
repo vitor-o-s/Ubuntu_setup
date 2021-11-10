@@ -55,9 +55,6 @@ export alias pbcopy='xclip -selection clipboard'
 export alias pbpaste='xclip -selection clipboard -o'
 source ~/.zshrc
 
-echo 'installing extensions'
-code --install-extension Shan.code-settings-sync
-
 echo 'installing spotify' 
 snap install spotify
 
@@ -66,7 +63,7 @@ sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
-sudo apt install python3.8
+sudo apt install python3
 
 echo 'installing pip3'
 sudo apt-get install python3-pip
@@ -74,20 +71,21 @@ sudo apt-get install python3-pip
 echo 'installing JupyterNotebook'
 sudo -H pip install jupyter
 
-echo 'installing Atom'
-sudo snap install atom --classic
-
 echo 'Installing VSCode'
 sudo snap install --classic code
 
-echo 'Installing PyCharm'
-sudo snap install pycharm-community --classic
+echo 'Installing Code Extensions'
+code --install-extension moyu.snapcode
+code --install-extension Shan.code-settings-sync
 
 echo 'installing Discord'
 sudo snap install discord
 
 echo 'installing Slack'
 sudo snap install slack -- classic
+
+echo 'installing Teams'
+sudo snap install teams-for-linux
 
 echo 'installing chrome' 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -102,19 +100,33 @@ echo 'installing GNOME-Tweaks'
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool
 
-echo 'remove modmmanager for post-install QGroundControl'
-sudo usermod -a -G dialout $USER
-sudo apt-get remove modemmanager -y
-sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+echo 'installing wine'
+sudo apt-get install wine
+# sudo pacman -S wine
+echo 'installing LTSpice'
+cd /tmp/
+wget http://ltspice.linear-tech.com/software/LTspiceXVII.exe
+wine LTspiceXVII.exe
+rm LTspiceXVII.exe
+# start lstpice through wine
+wine ~/.wine/drive_c/Program\ Files/LTC/LTspiceXVII/XVIIx64.exe
 
-echo 'installing ROS Noetic'
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-sudo apt update
-sudo apt install ros-noetic-desktop-full
-source /opt/ros/noetic/setup.bash
-echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+echo 'installing Octave'
+sudo snap install octave
+
+echo 'installing dbeaver'
+wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
+sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
+sudo apt-get install -f
+
+echo 'installing Typora'
+sudo snap install typora
+
+echo 'installing VLC'
+sudo snap install vlc
+
+echo 'installing OBS Studio'
+sudo snap install obs-studio
 
 clear 
 
