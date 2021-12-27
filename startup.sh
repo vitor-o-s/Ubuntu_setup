@@ -100,6 +100,18 @@ echo 'installing GNOME-Tweaks'
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool
 
+echo 'installing Octave'
+sudo snap install octave
+
+echo 'installing Typora'
+sudo snap install typora
+
+echo 'installing VLC'
+sudo snap install vlc
+
+echo 'installing OBS Studio'
+sudo snap install obs-studio
+
 echo 'installing wine'
 sudo apt-get install wine
 # sudo pacman -S wine
@@ -111,22 +123,25 @@ rm LTspiceXVII.exe
 # start lstpice through wine
 wine ~/.wine/drive_c/Program\ Files/LTC/LTspiceXVII/XVIIx64.exe
 
-echo 'installing Octave'
-sudo snap install octave
-
 echo 'installing dbeaver'
 wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
 sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
 sudo apt-get install -f
 
-echo 'installing Typora'
-sudo snap install typora
-
-echo 'installing VLC'
-sudo snap install vlc
-
-echo 'installing OBS Studio'
-sudo snap install obs-studio
+echo 'installing pgadmin'
+# Install the public key for the repository (if not done previously):
+sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+# Create the repository configuration file:
+sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+# Install pgAdmin
+# Install for both desktop and web modes:
+sudo apt install pgadmin4
+# Install for desktop mode only:
+sudo apt install pgadmin4-desktop
+# Install for web mode only: 
+sudo apt install pgadmin4-web 
+# Configure the webserver, if you installed pgadmin4-web:
+sudo /usr/pgadmin4/bin/setup-web.sh
 
 clear 
 
