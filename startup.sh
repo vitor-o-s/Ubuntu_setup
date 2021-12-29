@@ -121,7 +121,12 @@ wget http://ltspice.linear-tech.com/software/LTspiceXVII.exe
 wine LTspiceXVII.exe
 rm LTspiceXVII.exe
 # start lstpice through wine
-wine ~/.wine/drive_c/Program\ Files/LTC/LTspiceXVII/XVIIx64.exe
+#wine ~/.wine/drive_c/Program\ Files/LTC/LTspiceXVII/XVIIx64.exe
+
+echo 'installing Steam'
+sudo add-apt-repository multiverse
+sudo apt update
+sudo apt install steam
 
 echo 'installing dbeaver'
 wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
