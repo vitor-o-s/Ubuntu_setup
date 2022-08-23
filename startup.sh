@@ -2,9 +2,6 @@ echo "Welcome! Let's start setting up your system. It could take more than 10 mi
 
 sudo apt-get update
 
-echo 'installing snap'
-sudo apt install snapd
-
 echo 'installing curl' 
 sudo apt install curl -y
 
@@ -27,18 +24,8 @@ read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
 
-echo "Can I set VIM as your default GIT editor for you? (y/n)"
-read git_core_editor_to_vim
-if echo "$git_core_editor_to_vim" | grep -iq "^y" ;then
-	git config --global core.editor vim
-else
-	echo "Okay, no problem. :) Let's move on!"
-fi
-
-echo "Generating a SSH Key"
-ssh-keygen -t rsa -b 4096 -C $git_config_user_email
-ssh-add ~/.ssh/id_rsa
-cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
+echo "Setting cache to save PAT for your git credential"
+git config --global credential.helper cache
 
 echo 'enabling workspaces for both screens' 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
@@ -57,13 +44,6 @@ source ~/.zshrc
 
 echo 'installing spotify' 
 snap install spotify
-
-echo 'installing Python3'
-sudo apt update
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
-sudo apt install python3
 
 echo 'installing pip3'
 sudo apt-get install python3-pip
@@ -107,9 +87,6 @@ echo 'installing GNOME-Tweaks'
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool
 
-echo 'installing Octave'
-sudo snap install octave
-
 echo 'installing Typora'
 sudo snap install typora
 
@@ -118,17 +95,6 @@ sudo snap install vlc
 
 echo 'installing OBS Studio'
 sudo snap install obs-studio
-
-echo 'installing wine'
-sudo apt-get install wine
-# sudo pacman -S wine
-echo 'installing LTSpice'
-cd /tmp/
-wget http://ltspice.linear-tech.com/software/LTspiceXVII.exe
-wine LTspiceXVII.exe
-rm LTspiceXVII.exe
-# start lstpice through wine
-#wine ~/.wine/drive_c/Program\ Files/LTC/LTspiceXVII/XVIIx64.exe
 
 echo 'installing Steam'
 sudo add-apt-repository multiverse
