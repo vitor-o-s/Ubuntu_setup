@@ -30,6 +30,10 @@ sh startup.sh
 * [Spotify](https://www.spotify.com/) - Music streaming and media services provider
 * [Pip](https://pypi.org/project/pip/) - Package installer for Python
 * [Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - It suggests commands as you type based on history and completions
+* [PostgreSQL-14]()
+* [dbeaver]()
+* [pgAdmin4]()
+* [Docker]()
 
 ## Authors
 
