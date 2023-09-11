@@ -62,7 +62,7 @@ echo 'installing Discord'
 sudo snap install discord
 
 echo 'installing Slack'
-sudo snap install slack -- classic
+sudo snap install slack
 
 echo 'installing Teams'
 sudo snap install teams-for-linux
@@ -89,9 +89,6 @@ sudo apt install gnome-tweak-tool
 
 echo 'installing Postman'
 sudo snap install postman
-
-echo 'installing PostgreSQL'
-sudo apt install postgresql-14
 
 echo 'installing dbeaver'
 wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
@@ -137,10 +134,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # Verify that the Docker Engine installation is successful by running the hello-world image:
 sudo docker run hello-world
 
-echo 'Okay, from here its just fun apps'
+echo 'pulling docker image PostgreSQL'
+docker pull postgres:15
 
-echo 'installing Typora'
-sudo snap install typora
+echo 'Okay, from here its just fun apps'
 
 echo 'installing VLC'
 sudo snap install vlc
