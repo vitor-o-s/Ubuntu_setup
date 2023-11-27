@@ -64,19 +64,19 @@ sudo snap install discord
 echo 'installing Slack'
 sudo snap install slack
 
-echo 'installing Teams'
-sudo snap install teams-for-linux
+# echo 'installing Teams'
+# sudo snap install teams-for-linux
 
-echo 'installing Edge'
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-sudo rm microsoft.gpg
-sudo apt update && sudo apt install microsoft-edge-stable
+# echo 'installing Edge'
+# curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+# sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+# sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+# sudo rm microsoft.gpg
+# sudo apt update && sudo apt install microsoft-edge-stable
 
-echo 'installing chrome' 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+# echo 'installing chrome' 
+# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+# sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 echo 'installing autosuggestions' 
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
@@ -133,6 +133,10 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 # Verify that the Docker Engine installation is successful by running the hello-world image:
 sudo docker run hello-world
+
+echo 'Config Docker User'
+sudo usermod -aG docker ${USER}
+su - ${USER}
 
 echo 'pulling docker image PostgreSQL'
 docker pull postgres:15
