@@ -45,8 +45,12 @@ source ~/.zshrc
 echo 'installing spotify' 
 snap install spotify
 
-echo 'installing pip3'
-sudo apt-get install python3-pip
+# echo 'installing pip3'
+# sudo apt-get install python3-pip
+
+echo 'installing tree'
+echo 'Just help to navigate in the folders'
+sudo apt-get install tree
 
 # echo 'installing JupyterNotebook'
 # sudo -H pip install jupyter
