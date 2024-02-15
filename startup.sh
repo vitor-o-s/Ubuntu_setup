@@ -19,7 +19,7 @@ git config --global user.name "$git_config_user_name"
 clear 
 
 echo "What email do you want to use in GIT user.email?"
-echo "For example, mine will be \"vitoros@outlook.com.br\""
+echo "For example, mine will be \"vitorsantos.2018@alunos.utfpr.edu.br\""
 read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
@@ -49,7 +49,7 @@ snap install spotify
 # sudo apt-get install python3-pip
 
 echo 'installing tree'
-echo 'Just help to navigate in the folders'
+echo 'Just to help with folder navigation'
 sudo apt-get install tree
 
 # echo 'installing JupyterNotebook'
